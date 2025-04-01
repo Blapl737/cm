@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контактные карточки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .contact-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-card img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        .contact-card h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Контактные карточки</h1>
+
+<template id="contact-card">
+    <div class="contact-card">
+        <img src="" alt="Contact Image" class="contact-image">
+        <div>
+            <h3 class="contact-name"></h3>
+            <p class="contact-email"></p>
+            <p class="contact-phone"></p>
+        </div>
+    </div>
+</template>
+
+<div id="contacts-container"></div>
+
+<script>
+    function createContactCard(name, email, phone, image) {
+        const template = document.getElementById('contact-card');
+        const clone = template.content.cloneNode(true);
+
+        clone.querySelector('.contact-image').src = image;
+        clone.querySelector('.contact-name').textContent = name;
+        clone.querySelector('.contact-email').textContent = email;
+        clone.querySelector('.contact-phone').textContent = phone;
+
+        document.getElementById('contacts-container').appendChild(clone);
+    }
+
+    createContactCard('Вася Кривожуев', 'vasya@example.com', '+7 (111) 111-11-11', 'https://via.placeholder.com/80');
+    createContactCard('Света Краснова', 'sveta@example.com', '+7 (333) 333-33-33', 'https://via.placeholder.com/80');
+    createContactCard('Женя Петров', 'zhenya@example.com', '+7 (555) 555-55-55', 'https://via.placeholder.com/80');
+</script>
+
+</body>
+</html>

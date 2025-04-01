@@ -1,0 +1,22 @@
+
+.input_elem{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.todo_card{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px 170px;
+    border-radius: 16px;
+    color: #fff;
+}
+
+.input_elem > input {
+    width: 150px;
+    height: 25px;
+    border-radius: 10px; 
+    border: none;
+}

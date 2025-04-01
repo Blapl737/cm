@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header, .footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ffffff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.stars {
+  margin-top: 10px;
+}
+
+.fa-star {
+  color: lightgray;
+}
+
+.active {
+  color: orange;
+}
